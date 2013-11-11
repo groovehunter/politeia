@@ -7,8 +7,8 @@ includes[] = https://raw.github.com/groovehunter/drupal/master/drupal-org-core.m
 
 ;defaults[projects][subdir] = "contrib"
 
-projects[politea][type] = profile
-projects[politea][download][type] = git
-projects[politea][download][url] = https://github.com/groovehunter/politeia.git
-projects[politea][download][branch] = master
+projects[politeia][type] = profile
+projects[politeia][download][type] = git
+projects[politeia][download][url] = https://github.com/groovehunter/politeia.git
+projects[politeia][download][branch] = master
 

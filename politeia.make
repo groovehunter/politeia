@@ -13,7 +13,7 @@ defaults[projects][subdir] = contrib
 projects[devel][version] = "1.3"
 
 
-; prima Modules
+; politea Modules
 projects[addressfield][version] = "1.0-beta4"
 projects[addressfield_tokens][version] = "1.3"
 projects[admin_views][version] = "1.2"

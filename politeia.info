@@ -1,0 +1,62 @@
+name = Politeia
+core = 7.x
+description = Governance tools and community building
+
+; Core
+dependencies[] = book
+dependencies[] = block
+dependencies[] = comment
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+;dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = path
+dependencies[] = search
+dependencies[] = taxonomy
+
+dependencies[] = features
+;dependencies[] = fe_profile
+;dependencies[] = fe_block
+; buggy
+;dependencies[] = l10n_update
+;dependencies[] = libraries
+
+; Contrib
+dependencies[] = admin_menu
+dependencies[] = admin_views
+dependencies[] = addressfield
+dependencies[] = addressfield_tokens
+dependencies[] = cck_phone
+dependencies[] = ctools
+dependencies[] = devel
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = date_views
+dependencies[] = dhtml_menu
+dependencies[] = email
+dependencies[] = entity
+dependencies[] = entity_dependency
+dependencies[] = entity_token
+dependencies[] = geocoder
+dependencies[] = geofield_map
+dependencies[] = geofield
+dependencies[] = geophp
+dependencies[] = link
+dependencies[] = module_filter
+dependencies[] = name
+dependencies[] = openlayers
+dependencies[] = openlayers_ui
+dependencies[] = openlayers_views
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = views
+dependencies[] = views_ui
+

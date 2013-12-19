@@ -82,7 +82,7 @@ cd $site_name
 
 
 echo "get custom modules via git clone..."
-echo "NONE"
+git clone "https://github.com/groovehunter/openspirit_basic_features.git"
 
 echo "change directory to install folder $INSTALL_DIR"
 cd $INSTALL_DIR

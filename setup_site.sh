@@ -1,9 +1,14 @@
 #!/bin/bash
 
+passwd=`cat /home/konnertz/.drush/dru_secrets`
+
 distro_name="politeia"
 site_base="polis"
-site_tld="utopiaspora.net"
-site_prod="polis.utopiaspora.net"
+#site_tld="utopiaspora.net"
+site_tld="local.lan"
+site_prod="polis.$site_tld"
+
+# utopiaspora.net"
 
 usage() {
   echo "USAGE: `basename $0` <site:dev|staging|prod>"
@@ -39,21 +44,29 @@ fi
 echo "Setting up $SITE \n"
 
 
-DRUPAL_ROOT=/var/www/vhosts/$SITE/s
+DRUPAL_ROOT=/var/www/vhosts/$SITE
 INSTALL_DIR=$DRUPAL_ROOT/sites/default
 export DRUPAL_ROOT
 export INSTALL_DIR
 
+if ! [[ -d $DRUPAL_ROOT ]]
+then
+    mkdir $DRUPAL_ROOT;
+fi
 echo "change to directory $DRUPAL_ROOT"
 cd $DRUPAL_ROOT
 
 
 echo "delete all below $DRUPAL_ROOT"
 echo "superuser password needed!"
-sudo rm * -r
+sudo rm * -r 
 
 echo "\nsetup drupal site according to drush makefile..."
-drush make "https://github.com/groovehunter/$site_distro.git;a=blob_plain;f=build-$site_distro.make;hb=HEAD" -y
+#url_gitweb="http://mygitwebsite.com/$distro_name.git;a=blob_plain;f=build-$distro_name.make;hb=HEAD" -y
+#url_github="https://github.com/groovehunter/$distro_name/blob/master/build-$distro_name.make"
+url_github="https://raw.github.com/groovehunter/$distro_name/master/build-$distro_name.make"
+echo "drush make $url_github"
+drush make "$url_github" -y
 
 if test "$?" != 0
 then

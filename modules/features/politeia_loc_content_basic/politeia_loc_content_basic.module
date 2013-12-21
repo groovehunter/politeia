@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the politeia_loc_content_basic feature.
+ */
+
+include_once 'politeia_loc_content_basic.features.inc';

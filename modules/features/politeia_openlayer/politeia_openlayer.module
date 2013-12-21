@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the politeia openlayer feature.
+ */
+
+include_once 'politeia_openlayer.features.inc';

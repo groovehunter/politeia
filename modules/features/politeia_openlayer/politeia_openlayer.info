@@ -1,0 +1,11 @@
+name = politeia openlayer
+core = 7.x
+package = politeia
+version = 7.x-1.0
+project = politeia_openlayer
+dependencies[] = ctools
+dependencies[] = openlayers
+features[ctools][] = openlayers:openlayers_maps:1
+features[features_api][] = api:1
+features[openlayers_maps][] = clone_of_geofield_formatter_map
+features[openlayers_maps][] = politeia

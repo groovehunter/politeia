@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the wp_semantic feature.
- */
-
-include_once 'wp_semantic.features.inc';

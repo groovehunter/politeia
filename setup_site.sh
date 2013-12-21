@@ -86,7 +86,7 @@ sudo chgrp www-data $INSTALL_DIR/files -R
 sudo chmod g+w $INSTALL_DIR/files -R
 
 ### general drupal tweaks
-setup_drupal_general.sh
+./setup_drupal_general.sh
 
 echo "change directory to custom module folder"
 cd $DRUPAL_ROOT/profiles/$distro_name/modules
@@ -118,12 +118,17 @@ cd $INSTALL_DIR
 echo "setting site variables..."
 drush vset site_name "$site_name"
 drush vset site_default_country de
-drush vset proxy_server "auproxy.syscomp.de"
-drush vset proxy_port "3128"
 drush vset configurable_timezones 0
 drush vset date_default_timezone "Europe/Berlin"
 drush vset user_default_timezone: "0"
 drush vset date_first_day "1"
+
+if [ $http_proxy ]
+then
+    drush vset proxy_server "auproxy.syscomp.de"
+    drush vset proxy_port "3128"
+fi
+
 
 
 # other vars
